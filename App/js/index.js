@@ -19,7 +19,49 @@ xui.Class('App', 'xui.Module',{
         iniComponents : function(){
             // [[Code created by CrossUI RAD Studio
             var host=this, children=[], append=function(child){children.push(child.get(0));};
-
+            
+            append(
+                xui.create("xui.UI.Label")
+                .setHost(host,"xui_ui_label7")
+                .setName("proba_lab")
+                .setLeft("28.19047619047619em")
+                .setTop("6.857142857142857em")
+                .setWidth("16.152380952380952em")
+                .setHeight("2.742857142857143em")
+                .setCaption("Привет")
+            );
+            
+            append(
+                xui.create("xui.UI.Button")
+                .setHost(host,"xui_ui_button3")
+                .setLeft("32.76190476190476em")
+                .setTop("19.80952380952381em")
+                .setWidth("12.114285714285714em")
+                .setHeight("3.580952380952381em")
+                .setCaption("Button")
+                .onClick([
+                    {
+                        "desc" : "Action 1",
+                        "type" : "other",
+                        "target" : "msg",
+                        "args" : [
+                            "проверка",
+                            "Салют!!!"
+                        ],
+                        "method" : "pop",
+                        "event" : 1
+                    }
+                ])
+            );
+            
+            append(
+                xui.create("xui.UI.PageBar")
+                .setHost(host,"xui_ui_pagebar1")
+                .setLeft("16.761904761904763em")
+                .setTop("19.80952380952381em")
+                .setCaption("PageBar")
+            );
+            
             return children;
             // ]]Code created by CrossUI RAD Studio
         },
